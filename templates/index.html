@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://echarts.baidu.com/dist/echarts.min.js"></script>
+<script type="text/javascript" src="https://www.echartsjs.com/asset/theme/dark.js"></script>
+
+<script type="text/javascript">
+        function getFileUrl(sourceId) {
+            var url;
+            if (navigator.userAgent.indexOf("MSIE")>=1) { // IE
+                url = document.getElementById(sourceId).value;
+            } else if(navigator.userAgent.indexOf("Firefox")>0) { // Firefox
+                url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+            } else if(navigator.userAgent.indexOf("Chrome")>0) { // Chrome
+                url = window.URL.createObjectURL(document.getElementById(sourceId).files.item(0));
+            }
+            return url;
+        }
+        function preImg(sourceId, targetId) {
+            var url = getFileUrl(sourceId);
+            var imgPre = document.getElementById(targetId);
+            imgPre.src = url;
+        }
+    </script>
+
+<style>
+    body{
+        background-color: rgb(52, 52, 52);
+            }
+    header {
+        background-color: rgb(60, 60, 60);
+        color:white;
+        width: 100%;
+        text-align:center;
+        padding:20px;
+    }
+    footer {
+        background-color: rgb(60, 60, 60);
+        color:white;
+        clear:both;
+        text-align:center;
+        width: 100%;
+        position: absolute;
+        top: 800px;
+        padding:10px;
+    }
+    .display{
+        position: absolute;
+        left: 800px;
+        top: 150px;
+    }
+
+    .button-new1 {
+            color: #fef4e9;
+            width: 160px;
+            height: 60px;
+            border: solid 1px #da7c0c;
+            background: #f78d1d;
+            background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+            background: -moz-linear-gradient(top, #faa51a, #f47a20);
+            display: inline;
+            vertical-align: baseline;
+            margin: 10px 10px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 25px;
+            padding: .5em 2em .55em;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+            border-radius: .5em;
+    }
+    .button-new2{
+            font-size: 20px;
+            display: inline;
+	        width: 160px;
+	        height: 60px;
+	        padding: .5em 2em .55em;
+            vertical-align: baseline;
+	        margin: 10px 10px;
+	        text-align: center;
+	        line-height: 32px;
+	        color: #ffffff;
+	        background: #f44336;
+            -webkit-border-radius: .5em;
+            -moz-border-radius: .5em;
+	        border-radius: .5em;
+	        cursor: pointer;
+	        letter-spacing: 1px;
+    }
+
+    input[type="range"] {
+                margin-top: 2px;
+                background-color: #272728;
+                border-radius: 15px;
+                width: 400px;
+                -webkit-appearance: none;
+                height:10px;
+            }
+            input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                cursor: default;
+                top: -5px;
+                height: 30px;
+                width: 20px;
+                transform: translateY(-4px);
+                background: none repeat scroll 0 0 #777;
+                border-radius: 15px;
+                -webkit-box-shadow: 0 -1px 1px black inset;
+            }
+    .clip{
+	    position: absolute;
+	    clip: rect(0, 0, 0, 0);
+            }
+
+</style>
+    <meta charset="UTF-8">
+    <title>PulseAI</title>
+</head>
+
+<body background="">
+<header style="font-size: 35px">PulseAI 包  裹  携  带  品  自  动  化  检  测  系  统</header>
+<br>
+<div class="get_image" id="get_image">
+    <br>
+
+    <form method="post" action="http://localhost:5000/detect" enctype="multipart/form-data" style="margin-left: 230px">
+        <br>
+        <div class="img_show">
+            <img id="img_file" src="{{ data['address'] }}"  width="400" height="400"/>
+        </div>
+        <br>
+
+            <label style="color: white">置信度调节(0.0~1.0)：</label>
+            <br>
+            <br>
+            <input type="range" max="1.0" min="0.1" step="0.1" name="threshold"/>
+            <br>
+            <input type="file" id="select_images" class="clip" name="photo" onchange="preImg(this.id, 'img_file')" />
+            <label for="select_images" class="button-new2" >
+                选择文件
+            </label>
+        <input type="submit" value="Go" class="button-new1" style="margin-top:15px;"/>
+    </form>
+</div>
+
+<div class="display">
+    <script>
+        var data_number = {{ data['number'] }};
+        var data_max_score = {{ data['max_score'] }};
+    </script>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="num_Chart" style="width: 500px;height:300px;">
+        <script >
+            var num_Chart = echarts.init(document.getElementById('num_Chart'), 'dark');
+
+            // 指定图表的配置项和数据
+            var num_Chart_option = {
+                title: {
+                    text: '检测数量报告'
+                },
+                tooltip: {},
+                legend: {
+                    num_Chart_legend:['已探测到的数量']
+                },
+                xAxis: {
+                    data: ['ISL', 'BNL', 'Cutter', 'Cell', 'Scissors']
+                },
+                yAxis: {},
+                series: [{
+                    name: '已探测到的数量',
+                    type: 'bar',
+                    data: data_number
+                }],
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            num_Chart.hideLoading();
+            num_Chart.setOption(num_Chart_option);
+        </script>
+    </div>
+
+    <div id="score_Chart" style="width: 500px;height:300px;">
+        <script >
+            var score_Chart = echarts.init(document.getElementById('score_Chart'), 'dark');
+            // 指定图表的配置项和数据
+            var score_Chart_option = {
+                title: {
+                    text: '检测置信度评估报告'
+                },
+                tooltip: {},
+                legend: {
+                    score_Chart_legend:['最大置信度']
+                },
+                xAxis: {
+                    data: ['ISL', 'BNL', 'Cutter', 'Cell', 'Scissors']
+                },
+                yAxis: {},
+                series: [{
+                    name: '最大置信度(%)',
+                    type: 'bar',
+                    data: data_max_score
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            score_Chart.hideLoading();
+            score_Chart.setOption(score_Chart_option);
+        </script>
+    </div>
+</div>
+
+
+<footer>
+Copyright © 2019 - Mingqi Yuan of PulseAI. All Rights Reserved
+</footer>
+
+
+</body>
+</html>

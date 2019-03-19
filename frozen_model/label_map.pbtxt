@@ -1,0 +1,24 @@
+item{
+    id: 1 
+    name: 'ISL'
+}
+
+item{
+    id: 2 
+    name: 'BNL'
+}
+
+item{
+    id: 3 
+    name: 'Cutter'
+}
+
+item{
+    id: 4 
+    name: 'Cell'
+}
+
+item{
+    id: 5 
+    name: 'Scissors'
+}

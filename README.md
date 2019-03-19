@@ -29,14 +29,14 @@ As the key work of logistics and security industry, the detection of package car
     <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/1.png'>
 </div>
 
-----
+---
 # Front-end based on Flask and echarts
 In order to use the model more conveniently, I designed a simple front-end based on Flask and echarts, and it looks great！
 <div align='center'>
     <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example.png'>
 </div>
-
 ---
+
 # Get it now
 Clone it：
 ```
@@ -52,13 +52,13 @@ $  wget https://codeload.github.com/Mingqi-Yuan/ADMP/zip/master
 The moudle below is required for the ADMP:
 
 |Name|
-|--|
-| TensorFlow、TensorFlow Object Detection API |
-| Flask|
-| json | 
-| NumPy|
-|OpenCV|
-|PIL|
+|:--:|
+| **TensorFlow、TensorFlow Object Detection API** |
+| **Flask**|
+| **json** | 
+| **NumPy**|
+|**OpenCV**|
+|**PIL**|
 The python environment of **Anaconda3** is recommended.Hope you will have fun with it!
 
 ---

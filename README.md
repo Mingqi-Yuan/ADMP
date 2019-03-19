@@ -28,15 +28,13 @@ As the key work of logistics and security industry, the detection of package car
 <div align='center'>
     <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/1.png'>
 </div>
-
 ---
 # Front-end based on Flask and echarts
 In order to use the model more conveniently, I designed a simple front-end based on Flask and echarts, and it looks great！
 <div align='center'>
-    <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example.png'>
+    <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/example.png'>
 </div>
 ---
-
 # Get it now
 Clone it：
 ```
@@ -47,7 +45,6 @@ or  you can get the zip file，then make a new **Flask project** with **PyCharm*
 $  wget https://codeload.github.com/Mingqi-Yuan/ADMP/zip/master
 ```
 ---
-
 # Package required
 The moudle below is required for the ADMP:
 
@@ -60,8 +57,6 @@ The moudle below is required for the ADMP:
 |**OpenCV**|
 |**PIL**|
 The python environment of **Anaconda3** is recommended.Hope you will have fun with it!
-
 ---
-
 # License
 [MIT License](LICENSE)

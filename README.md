@@ -35,8 +35,8 @@ In order to use the model more conveniently, I designed a simple front-end based
 <div align='center'>
     <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example.png'>
 </div>
----
 
+---
 # Get it now
 Clone it：
 ```
@@ -46,12 +46,11 @@ or  you can get the zip file，then make a new **Flask project** with **PyCharm*
 ```
 $  wget https://codeload.github.com/Mingqi-Yuan/ADMP/zip/master
 ```
-
-
-
 ---
+
 # Package required
 The moudle below is required for the ADMP:
+
 |Name|
 |--|
 | TensorFlow、TensorFlow Object Detection API |

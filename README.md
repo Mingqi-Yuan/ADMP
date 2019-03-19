@@ -1,5 +1,5 @@
 <div align='center'>
-    <em>![](https://github.com/Mingqi-Yuan/ADMP/blob/master/example/pulseai_logo.png)</em>
+    <em>![](https://github.com/Mingqi-Yuan/ADMP/master/example/pulseai_logo.png)</em>
 </div>
 
 <h1 align="center">

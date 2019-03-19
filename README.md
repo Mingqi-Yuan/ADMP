@@ -56,7 +56,7 @@ $  wget https://codeload.github.com/Mingqi-Yuan/ADMP/zip/master
 # Package required
 The moudle below is required for the ADMP:
 
-|Name|
+|Moudle|
 |:--:|
 | **TensorFlow、TensorFlow Object Detection API** |
 | **Flask**|

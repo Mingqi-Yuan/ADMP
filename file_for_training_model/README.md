@@ -5,15 +5,15 @@ Training with Tesla P40
 
 Here are the training data:
 
-![1](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training/example/1.png)
+![1](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/1.png)
 
-![2](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training/example/2.png)
+![2](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/2.png)
 
-![3](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training/example/loss.png)
+![3](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/loss.png)
 
-![4](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training/example/mAP.png)
+![4](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/mAP.png)
 
-![5](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training/example/AR.png)
+![5](https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/AR.png)
 
 ---
 

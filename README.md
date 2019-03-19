@@ -9,6 +9,7 @@
 ---
 <p align="center">
     <em>ADMP is an automatic model for parcels detection which based on deep learning algorithms.</em>
+    <br>
         <a href="https://opensource.org/licenses/MIT">
         <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg" alt="License"> 
     </a>

@@ -1,4 +1,7 @@
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2019031921510436.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ5OTIzNg==,size_16,color_FFFFFF,t_70)
+<div align='center'>
+    <em>![](https://github.com/Mingqi-Yuan/ADMP/blob/master/example/pulseai_logo.png)</em>
+</div>
+
 <h1 align="center">
     Automatic Detection System of Parcels Based on Deep Learning Algorithms
 </h1>
@@ -21,12 +24,12 @@
 ---
 As the key work of logistics and security industry, the detection of package carriers undertakes the important task of preventing dangerous contraband from entering the transport channels. Tight time, heavy tasks and less personnel，which has always been a difficult problem in front of security inspection. With the continuous development of passenger logistics industry, the huge number of parcels has far exceeded the scope of manual processing, which has brought great challenges to the logistics industry and security industry. In recent years, the breakthrough of deep learning technology has made high-precision target detection technology widely used and achieved remarkable achievements, which makes it possible to apply target detection technology to security inspection work.Based on three target detection algorithms, this paper establishes models to learn 1406 image data containing five types of contraband, after training for 100,000 times, the optimal mAP was stable at about 83.62%. Using several X-Ray images to be tested, the detection model successfully detects the prohibited items in the image. At last, the deployment mode of "combination of the end and cloud" is proposed for model deployment, and the suggestions of the practical application and improvement direction of the detection model are proposed.
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190319221536815.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ5OTIzNg==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述]()
 
 ----
 # Front-end based on Flask and echarts
 In order to use the model more conveniently, I designed a simple front-end based on Flask and echarts, and it looks great！
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20190319221554355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ5OTIzNg==,size_16,color_FFFFFF,t_70)
+![在这里插入图片描述]()
 
 ---
 # Get it now

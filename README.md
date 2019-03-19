@@ -36,7 +36,7 @@ As the key work of logistics and security industry, the detection of package car
 # Front-end based on Flask and echarts
 In order to use the model more conveniently, I designed a simple front-end based on Flask and echarts, and it looks great！
 <div align='center'>
-    <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/file_for_training_model/example/example.png'>
+    <img src= 'https://github.com/Mingqi-Yuan/ADMP/blob/master/example/example.png'>
 </div>
 
 ---

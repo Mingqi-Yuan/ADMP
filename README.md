@@ -67,6 +67,7 @@ The moudle below is required for the ADMP:
 | **NumPy**|
 |**OpenCV**|
 |**PIL**|
+
 The python environment of **Anaconda3** is recommended.Hope you will have fun with it!
 
 ---

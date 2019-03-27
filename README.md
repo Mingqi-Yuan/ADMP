@@ -47,11 +47,11 @@ In order to use the model more conveniently, I designed a simple front-end based
 # Get it now
 Clone it：
 ```
-$ git clone https://github.com/Mingqi-Yuan/ADMP.git
+$ git clone https://github.com/Mingqi-Yuan/ADSP.git
 ```
 or  you can get the zip file，then make a new **Flask project** with **PyCharm**.
 ```
-$  wget https://codeload.github.com/Mingqi-Yuan/ADMP/zip/master
+$  wget https://codeload.github.com/Mingqi-Yuan/ADSP/zip/master
 ```
 
 ---
